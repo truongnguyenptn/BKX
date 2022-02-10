@@ -13,12 +13,14 @@ html {
 }
 .flex {
     display: flex;
-    justify-content: end;
+    justify-content: start;
 }
 .ml-12 {
    margin-left: 12px;
 }
-
+.mr-12 {
+    margin-right: 30px;
+ }
 .pull-right {
     float: right;
 }
@@ -34,11 +36,23 @@ html {
 .header-nav{
 
 }
+.bus-rating {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+}
+.bus-info {
+    flex: 1 2 auto;
+}
+.ml-auto {
+        margin-left: auto;
+}
+.modal {
+    display: block;
+    background-color: black;
+}
 footer {
     flex: 1 1;
     flex-direction: wrap;
     text-align: center
-}
-content {
-  height: ;
 }
