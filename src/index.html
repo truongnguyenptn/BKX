@@ -20,31 +20,83 @@
 
 <body>
   <!-- Large modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      ...
-    </div>
+
+<div id="myModal" class="ticket-modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   
+    <div class="col">
+      <h4 class="mb-3">Thông tin đặt vé</h4>
+      <form class="needs-validation" novalidate="">
+        <div class="row g-3">
+          <div class="row">
+            <label for="firstName" class="form-label">Tên</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Nguyễn Văn A"  value="" required="">
+            <div class="invalid-feedback">
+               Thông tin sai
+            </div>
+          </div>
+
+        
+
+          
+          <div class="row">
+            <label for="email" class="form-label">SĐT</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="invalid-feedback">
+              Thông tin sai
+           </div>
+          </div>
+          <div class="row">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="invalid-feedback">
+              Thông tin sai
+           </div>
+          </div>
+
+          <div class="row">
+            <label for="address" class="form-label">Địa chỉ</label>
+            <input type="text" class="form-control" id="address" placeholder="1234 Nguyễn Lương Bằng" required="">
+            <div class="invalid-feedback">
+            Thông tin sai
+            </div>
+          </div>
+
+        
+
+          
+        </div>
+
+       
+
+     
+
+       
+
+       
+
+         
+        </div>
+
+        <hr class="my-4">
+
+        <button class="w-100 btn btn-primary btn-lg" type="submit">Thanh toán</button>
+      </form>
+    </div>s
   </div>
+
 </div>
 
-<!-- Small modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
 
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
-  <header>
+  
 
-    <nav class="navbar navbar-expand-md navbar-light bg-color">
+    <nav class="navbar navbar-expand-md  header-color">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">BKX</a>
+        <a class="navbar-brand header-logo" href="#">BKX</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -103,14 +155,14 @@
           </div>
         </div>
         <div class="d-grid gap-2">
-          <button type="submit" class="btn btn-primary">Tìm Kiếm</button>
+          <button type="submit" class="btn btn-primary show-bus-search">Tìm Kiếm</button>
         </div>
         </form>
         
       </div>
     </div>
-        
-        <div class="border ticket-chooses row">
+        <div class="bus-search">
+          <div class="border ticket-chooses row">
             <div class="filter bg-color col-3 border">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -137,18 +189,129 @@
                   </div>
                   <h3 class="bus-price ml-auto">500K</h3>
                 </div>
-            
+                  
                 <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                <div class="flex">
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle show-bus-detail" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Thông tin chi tiết
+                    </button>
+                  
+                  </div>
+                 
+                  <button href="#" type="button" class="btn btn-primary book-ticket ml-auto">
+                    Đặt vé
+                  </button>
+                </div>
+                </button>
+                <div class="bus-detail">
+                  <div class="seat-detail"></div>
+                </div>
+              </div>
+              <div class="feature col mt-3 mb-3 border ">
+                <div class="bus-info flex">
+                  <h2  class="bus-name mr-12" >Xe</h2>
+                  <div  class="bus-rating border bg-color">
+                    
+                    <i class="fas fa-star">5</i>
+                  </div>
+                  <h3 class="bus-price ml-auto">500K</h3>
+                </div>
+                  
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                <div class="flex">
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle show-bus-detail" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Thông tin chi tiết
+                    </button>
+                  
+                  </div>
+                 
+                  <button href="#" type="button" class="btn btn-primary book-ticket ml-auto">
+                    Đặt vé
+                  </button>
+                </div>
+                
+                <div class="bus-detail">
+                  <div class="seat-detail"></div>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div> 
+        <div class="border ticket-chooses row bus-search">
+            <div class="filter bg-color col-3 border">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Default checkbox
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                  Checked checkbox
+                </label>
+              </div>
+           
+            </div>
+            <div class="col-9 ticket-list  border">
+           
+              <div class="feature col mt-3 mb-3 border ">
+                <div class="bus-info flex">
+                  <h2  class="bus-name mr-12" >Xe</h2>
+                  <div  class="bus-rating border bg-color">
+                    
+                    <i class="fas fa-star">5</i>
+                  </div>
+                  <h3 class="bus-price ml-auto">500K</h3>
+                </div>
+                  
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle show-bus-detail" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Thông tin chi tiết
+                  </button>
+                
+                </div>
+               
                 <button href="#" type="button" class="btn btn-primary book-ticket">
                   Đặt vé
                 </button>
+                <div class="bus-detail">
+                  <div class="seat-detail"></div>
+                </div>
               </div>
-           
+              <div class="feature col mt-3 mb-3 border ">
+                <div class="bus-info flex">
+                  <h2  class="bus-name mr-12" >Xe</h2>
+                  <div  class="bus-rating border bg-color">
+                    
+                    <i class="fas fa-star">5</i>
+                  </div>
+                  <h3 class="bus-price ml-auto">500K</h3>
+                </div>
+                  
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle show-bus-detail" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Thông tin chi tiết
+                  </button>
+                
+                </div>
+               
+                <button href="#" type="button" class="btn btn-primary book-ticket ml-auto">
+                  Đặt vé
+                </button>
+                <div class="bus-detail">
+                  <div class="seat-detail"></div>
+                </div>
+              </div>
             </div>
             </div>
             
         
-            <button type="button" class="btn btn-primary"  data-whatever="@mdo">Open modal for @mdo</button>
+            
 
             
            
@@ -157,7 +320,7 @@
  
  
   </div>
-  <footer class="border-top fixed-bottom">
+  <footer class="border-top ">
     <div class="p-2">
       <h2>Công ty TNHH Thương Mại Dịch Vụ BachKhoaXe</h2>
       <p>Địa chỉ đăng ký kinh doanh: 54 Nguyễn Lương Bằng, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam</p>

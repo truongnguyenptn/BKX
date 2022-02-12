@@ -1,36 +1,96 @@
-
-function handleModal() {
+function App() {
     let $ = document.querySelector.bind(document);
     let $$ = document.querySelectorAll.bind(document);
-    var modal = document.querySelector(".modal");
-    var container = modal.querySelector(".container");
-    let bookTicket = $$('.book-ticket');
-    let test = document.querySelector('.book-ticket');
+    function Signin() {
 
-   test.onclick = function(e){
-    alert('test')
-   }
-   console.log(test)
-    const len=bookTicket.length;
-    // bookTicket.forEach(button => {
-        
-    
-     
+    }
+    function handleSearch() {
+        let showSearchBus = $('.show-bus-search');
+        let busSearch = $('.bus-search');
+
+        showSearchBus.onclick = function () {
+                console.log("ok")
+                busSearch.style.display = "block";
             
-          
-    //         button.onclick = function () {
-    //         modal.classList.remove("hidden");
-    //         console.log("ok")
-    //         document.querySelector(".modal").addEventListener("click", function (e) {
-    //             if (e.target !== modal && e.target !== container) return;     
-    //             modal.classList.add("hidden");
-    //             });
-    //         };
-        
-           
-        
-    // })
-    
-}
 
-handleModal();
+
+         
+
+        }
+    }
+        function handleModal() {
+
+
+            let bookTicket = $$('.book-ticket');
+
+
+            const len = bookTicket.length;
+            bookTicket = $$('.book-ticket');
+            var modal = $(".ticket-modal");
+            var span = document.getElementsByClassName("close")[0];
+            for (let i = 0; i < len; i++) {
+                if (bookTicket[i]) {
+
+                    bookTicket[i].onclick = function () {
+                        modal.style.display = "block";
+
+                    }
+                }
+            }
+            // Get the button that opens the modal
+
+
+            // Get the <span> element that closes the modal
+
+
+            // When the user clicks on the button, open the modal
+
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+        }
+        function handleDetail() {
+            let showDetail = $$('.show-bus-detail');
+            let detail = $$('.bus-detail');
+            const len = showDetail.length;
+            for (let i = 0; i < len; i++) {
+                if (showDetail[i]) {
+
+                    showDetail[i].onclick = function () {
+                        if (detail[i].style.display == "block") {
+                            detail[i].style.display = "none";
+                        } else detail[i].style.display = "block";
+
+                    }
+
+                }
+            }
+            // Get the button that opens the modal
+
+
+            // Get the <span> element that closes the modal
+
+
+            // When the user clicks on the button, open the modal
+
+
+            // When the user clicks on <span> (x), close the modal
+
+
+        }
+        handleModal();
+        handleDetail();
+        handleSearch()
+    }
+
+    App();
